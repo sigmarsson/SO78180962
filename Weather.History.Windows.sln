@@ -36,5 +36,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Weather.History.Shared\Weather.History.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
+		Weather.History.Shared\Weather.History.Shared.projitems*{6cffa08a-d56d-40e2-b8da-1a971083a45b}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

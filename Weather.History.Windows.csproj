@@ -55,9 +55,13 @@
 
   <ItemGroup>
     <Compile Remove="BundleArtifacts\**" />
+    <Compile Remove="Weather.History.Shared\**" />
     <EmbeddedResource Remove="BundleArtifacts\**" />
+    <EmbeddedResource Remove="Weather.History.Shared\**" />
     <None Remove="BundleArtifacts\**" />
+    <None Remove="Weather.History.Shared\**" />
     <Page Remove="BundleArtifacts\**" />
+    <Page Remove="Weather.History.Shared\**" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.WinUI.Controls.Segmented" Version="8.0.240109" />
@@ -94,4 +98,8 @@
   <ItemGroup>
     <PRIResource Remove="BundleArtifacts\**" />
   </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="Weather.History.Shared\**" />
+  </ItemGroup>
+  <Import Project="Weather.History.Shared\Weather.History.Shared.projitems" Label="Shared" />
 </Project>

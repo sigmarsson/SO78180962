@@ -1,12 +1,9 @@
 using Microsoft.UI.Xaml;
 
-using Weather.History.Log;
-using Weather.History.CrossCutting;
 
 using System.IO;
 using System;
 using Prism.Ioc;
-using Weather.History.Abstract;
 using System.Threading;
 
 namespace Weather.History
@@ -18,15 +15,15 @@ namespace Weather.History
 #if WINDOWS
             UnhandledException += ExceptionHandler;
 #endif
-            Environment.SetEnvironmentVariable(MyEnvironment.VARIABLE, AppDataLocation.Current, EnvironmentVariableTarget.Process);
+            //Environment.SetEnvironmentVariable(MyEnvironment.VARIABLE, AppDataLocation.Current, EnvironmentVariableTarget.Process);
 
-            var logDirectory = Path.Combine(AppDataLocation.Current, "Log");
+            //var logDirectory = Path.Combine(AppDataLocation.Current, "Log");
 
-            Directory.CreateDirectory(logDirectory);
+            //Directory.CreateDirectory(logDirectory);
 
-            Log4.Debug($"Current Working Directory : {SetCwd()}");
-            Log4.Debug($"Log Directory: {logDirectory}");
-            Log4.Info($"Time zone: {TimeZoneInfo.Local.Id}");
+            //Log4.Debug($"Current Working Directory : {SetCwd()}");
+            //Log4.Debug($"Log Directory: {logDirectory}");
+            //Log4.Info($"Time zone: {TimeZoneInfo.Local.Id}");
 
             InitializeComponent();
         }
@@ -44,7 +41,7 @@ namespace Weather.History
             }
             catch (Exception e)
             {
-                Log4.Error(e);
+                //Log4.Error(e);
 
                 return null;
             }
@@ -54,17 +51,17 @@ namespace Weather.History
         {
             try
             {
-                var diag = Container.Resolve<ISelfDiagnostics>();
+               // var diag = Container.Resolve<ISelfDiagnostics>();
 
-                diag.PostCrash(e.Exception);
+                //diag.PostCrash(e.Exception);
             }
             catch (Exception ex)
             {
-                Log4.Error(ex);
+                //Log4.Error(ex);
             }
             finally
             {
-                Log4.Error(e.Exception);
+                //Log4.Error(e.Exception);
             }
         }
     }

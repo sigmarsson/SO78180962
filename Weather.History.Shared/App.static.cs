@@ -4,7 +4,6 @@ using Windows.Graphics;
 
 using Microsoft.UI.Xaml;
 
-using Weather.History.Win32;
 
 using System.Runtime.InteropServices;
 
@@ -15,8 +14,6 @@ using Vanara.PInvoke;
 
 using System;
 
-using Weather.History.CrossCutting;
-using Weather.History.Utils;
 using Microsoft.UI.Windowing;
 #if WINDOWS
 using WinUICommunity;
@@ -71,19 +68,6 @@ namespace Weather.History
         private static void FullScreenWindow()
         {
             Window.SetWindowPresenter(AppWindowPresenterKind.FullScreen);
-        }
-
-        internal static void SwitchTheme(ThemeMode theme)
-        {
-            if (theme == ThemeMode.Light)
-            {
-                SwitchLightMode();
-            }
-
-            if (theme == ThemeMode.Dark)
-            {
-                SwitchDarkMode();
-            }
         }
 
         internal static void SwitchDefaultMode()
